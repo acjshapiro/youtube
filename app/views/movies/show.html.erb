@@ -1,13 +1,7 @@
-<<<<<<< HEAD
 <h1>Showing Movie</h1>
-=======
-<<h1><%= @movie.title %></h1>
-
+<h1><%= @movie.title %></h1>
 <h2>Comments</h2>
-
 <% @movie.comments.each do |comment| %>
   <%= render 'comments/comment', { comment: comment } %>
 <% end %>
-
 <%= link_to 'Add Comment', new_movie_comment_path(@movie) %>
->>>>>>> comments

@@ -1,38 +1,18 @@
-<h1>Youtube Navbar</h1>
-<<<<<<< HEAD
-<%= @movies.first.title %>
-<div class="row">
-  <div class="col s12 m6">
-    <% @movies.each do |movie| %>
-=======
 
-<%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
-<p>Find me in app/views/movies/index.html.erb</p>
-
-<% @movies.each do |movie| %>
+<h1>uToob Gallery</h1>
+<div class="cards-container grid  cards">
   <div class="row">
-    <div class="col s12 m6">
->>>>>>> comments
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-          <span class="card-title"><%= movie.title %></span>
-          <!-- <img iframe="iframe" stuff="stuff"> -->
-          <img id="avatar_image" src="https://robohash.org/<%= movie.title %>?set=set4"/>
-        </div>
-<<<<<<< HEAD
-        <div>
-          <!-- <div class="card-action"> -->
-=======
-        <div class="card-action">
->>>>>>> comments
-          <%= link_to movie.title, movie%>
-        </div>
-
-    </div>
-          <% end %>
+    <% @movies.each do |movie| %>
+      <div class="col s12 m6 l3">
+          <div class="card green white-text lighten-3">
+            <div class="card-content white-text">
+              <span class="card-title white-text centered"><%= link_to movie.title, movie %></span>
+              <iframe src="<%= movie.trailer %>"></iframe>
+            </div>
+            <div>
+              <%= link_to movie.description, movie%>
+            </div>
+          </div>
+      </div>
+    <% end %>
   </div>
-<<<<<<< HEAD
-</div>
-=======
-<% end %>
->>>>>>> comments
