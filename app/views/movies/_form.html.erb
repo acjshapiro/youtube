@@ -1,0 +1,49 @@
+<body>
+  <div class="container">
+    <%= form_with(model: @movie, local: true) do |form| %>
+    <% if @movie.errors.any? %>
+      <div id="notice" class="error"></div>
+      <h2><%= pluralize(movie.errors.count, "error") %>
+        prohibited this movie from being saved:</h2>
+
+      <ul>
+        <% movie.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :movie_title, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.text_field :duration, id: :movie_duration, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :genre %>
+    <%= form.text_field :genre, id: :movie_genre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :movie_description, required: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :trailer %>
+    <%= form.text_field :trailer, id: :movie_trailer, required: true %>
+  </div>
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">
+    <%= form.submit "Submit" %>
+  </button>
+</div>
+<% end %>
+
+</body>
+</div>

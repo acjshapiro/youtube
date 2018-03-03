@@ -1,4 +1,3 @@
-
 <h1>Youtube Navbar</h1>
 <%= @movies.first.title %>
 <div class="row">
@@ -8,16 +7,13 @@
         <div class="card-content white-text">
           <span class="card-title"><%= movie.title %></span>
           <!-- <img iframe="iframe" stuff="stuff"> -->
-          <img id="avatar_image" src="https://robohash.org/<%= movie.title %>?set=set4" />
+          <img id="avatar_image" src="https://robohash.org/<%= movie.title %>?set=set4"/>
         </div>
         <div>
-        <!-- <div class="card-action"> -->
+          <!-- <div class="card-action"> -->
           <%= link_to movie.title, movie%>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-
-
-<%= button_to 'Log Out', destroy_user_session_path, method: :delete %>
