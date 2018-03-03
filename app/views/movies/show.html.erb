@@ -1,11 +1,23 @@
+<div class="container">
+  <body>
 
+    <h1><%= @movie.title %></h1>
+    <div class="video-container">
+      <iframe width="853" height="480" src="<%= @movie.trailer %>" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+    <p>
+      <%= @movie.duration %>
 
-<h1><%= @movie.title %></h1>
+    </p>
+    <p>
+      <%= @movie.genre %>
+    </p>
+    <h5>Comments</h5>
+    <% @movie.comments.each do |comment| %>
+      <%= render 'comments/comment', { comment: comment } %>
+    <% end %>
 
-<h2>Comments</h2>
-
-<% @movie.comments.each do |comment| %>
-  <%= render 'comments/comment', { comment: comment } %>
-<% end %>
-
-<%= link_to 'Add Comment', new_movie_comment_path(@movie) %>
+    <button class="btn waves-effect waves-light" type="submit" name="action">
+      <%= link_to 'Add Comment', new_movie_comment_path(@movie) %>
+    </button>
+  </div>

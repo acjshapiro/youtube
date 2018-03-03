@@ -1,10 +1,13 @@
-<h1>Comments#new</h1>
-<p>Find me in app/views/comments/new.html.erb</p>
-
-<h1>Add A comment</h1>
-<%= form_for [@movie, @comment] do |f| %>
+<div class="container">
+  <h1>Make a Comment</h1>
+  <%= form_for [@movie, @comment] do |f| %>
   <%= f.label :body %>
   <%= f.text_area :body, required: true %>
-  <br />
-  <%= f.submit %>
+  <br/>
+
+  <button class="btn waves-effect waves-light" type="submit" name="action">
+    <%= f.submit %>
+  </button>
 <% end %>
+</div>
+</body>
