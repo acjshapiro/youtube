@@ -9,7 +9,7 @@ Movie.create(
     title: 'The Dark Night',
     duration: '2hr 32min',
     genre: 'Action',
-    description: 'http://www.imdb.com/title/tt0468569/',
+    description: 'http://www.imdb.com/title/tt0468569/#summary_text',
     trailer: 'https://www.youtube.com/embed/EXeTwQWrcwY'
   )
 Movie.create(

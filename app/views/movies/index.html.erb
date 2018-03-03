@@ -1,16 +1,18 @@
 
-<h1>uToob Gallery</h1>
-<div class="cards-container grid  cards">
+<h1 class="centered">uTube Gallery</h1>
+<div class="cards-container grid cards">
   <div class="row">
     <% @movies.each do |movie| %>
       <div class="col s12 m6 l3">
-          <div class="card green white-text lighten-3">
-            <div class="card-content white-text">
+          <div class="card green centered white-text lighten-3">
+            <div class="card-content centered white-text">
               <span class="card-title white-text centered"><%= link_to movie.title, movie %></span>
-              <iframe src="<%= movie.trailer %>"></iframe>
+              <iframe class="centered" src="<%= movie.trailer %>"></iframe>
             </div>
-            <div>
+            <div class="container centered">
               <%= link_to 'More Info @ IMDB', movie.description %>
+              <br />
+              <br />
             </div>
           </div>
       </div>
